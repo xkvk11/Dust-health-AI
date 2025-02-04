@@ -1,0 +1,84 @@
+/* 전체 레이아웃 */
+.dustdata-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 왼쪽(2), 오른쪽(1) */
+    grid-template-rows: 1fr 1fr; /* 위쪽(1), 아래쪽(1) */
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; /* 화면 중앙에서 최대 크기 */
+    margin: auto; /* 중앙 정렬 */
+    padding: 20px;
+    box-sizing: border-box; /* 패딩 포함한 크기 계산 */
+}
+
+/* 섹션 공통 스타일 */
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* 일정한 높이 유지 */
+}
+
+/* 현재 섹션 (왼쪽 세로) */
+.current-section {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3; /* 세로로 병합 */
+    height: 600px;
+}
+
+/* 과거 섹션 (오른쪽 위) */
+.past-section {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    height: 300px;
+}
+
+/* 미래 섹션 (오른쪽 아래) */
+.future-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 300px;
+}
+
+/* 사용자 대응 섹션 (하단) */
+.analyze-section {
+    grid-column: 1 / 3; /* 전체 폭 */
+    grid-row: 3 / 4;
+    background-color: #2b6cb0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* 메인 버튼 정렬 */
+.main-button {
+    grid-column: 1 / 3; /* 전체 폭 */
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1024px) {
+    .dustdata-grid {
+        grid-template-columns: 1fr; /* 한 열 */
+        grid-template-rows: repeat(4, auto); /* 4개의 행 */
+    }
+    .current-section, .past-section, .future-section, .analyze-section {
+        grid-column: 1 / 2; /* 한 열 전체 차지 */
+        grid-row: auto;
+    }
+}
+
+/* 섹션 높이 균일화 */
+.section {
+    min-height: 300px; /* 섹션 높이 고정 */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}

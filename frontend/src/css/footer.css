@@ -1,0 +1,14 @@
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    border-radius: 15px;
+  }
+  
+  .nav-button {
+    background: none;
+    padding: 10px 50px;
+    border: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }

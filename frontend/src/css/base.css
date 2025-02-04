@@ -1,0 +1,324 @@
+/* 기본 스타일 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 컨테이너 스타일 */
+.update-container,
+.update-password-container,
+.login-container,
+.home-container,
+.register-container,
+.mypage-container,
+.dashboard-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 네비게이션 스타일 */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a,
+nav ul li button {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+  background-color: #007bff;
+}
+
+/* 헤더 스타일 */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* 폼 스타일 */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="text"]:read-only,
+input[type="email"]:read-only,
+input[type="password"]:read-only {
+  background-color: #f0f0f0;
+  color: #888;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
+
+input[type="text"]:read-only:focus,
+input[type="email"]:read-only:focus,
+input[type="password"]:read-only:focus {
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.checkbox-group label {
+  width: 45%;
+  margin-bottom: 8px;
+}
+
+/* 버튼 스타일 */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  background-color: #139ad8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button:hover {
+  background-color: #0081bd;
+}
+
+button:disabled {
+  background-color: #888;
+}
+
+button:hover:disabled {
+  background-color: #444;
+}
+
+/* 메시지 스타일 */
+.error-message {
+  color: #ff0000;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 1em;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 사용자 정보 스타일 */
+.user-info p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.user-info strong {
+  font-weight: bold;
+  color: #555;
+}
+
+/* 카드 스타일 */
+.diseases-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.disease-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #444;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.disease-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 테이블 스타일 */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr.success-row {
+  background-color: #c6f0c7;
+}
+
+table tr.failure-row {
+  background-color: #ff949d;
+}
+
+table tr.success-row:hover {
+  background-color: #71ff6c;
+}
+
+table tr.failure-row:hover {
+  background-color: #ff5c5c;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1024px) {
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  .update-container,
+  .update-password-container,
+  .login-container,
+  .home-container,
+  .register-container,
+  .mypage-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  table th, table td {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.95em;
+  }
+
+  nav ul li a,
+  nav ul li button {
+    font-size: 1em;
+    padding: 6px 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    padding: 8px;
+  }
+
+  button {
+    font-size: 1em;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  nav ul li a,
+  nav ul li button {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  select {
+    font-size: 0.9em;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}

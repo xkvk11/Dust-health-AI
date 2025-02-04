@@ -1,0 +1,436 @@
+
+/* 구글 폰트 로드 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+}
+
+
+.dust-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    width: 100%;
+    text-align: center;
+    height: 1300px;
+}
+
+.dust-content {
+    width: 42.5%;
+    max-width: 1200px;
+}
+
+.dust-content p:first-of-type {
+    width: 100%;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: #f0f8ff;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.custom-marker-label {
+    color: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.weather-icon {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+}
+
+.map-container {
+    width: 42.5%;
+    height: 500px;
+    position: relative;
+    margin: 0px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-container .leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.gauge-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.gauge {
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.gauge p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* API 데이터 섹션 */
+.api-data-section {
+    padding: 0px auto;
+    width: 42.5%;
+    height: 25%;
+}
+
+.api-data-list {
+    padding: 0;
+}
+.api-data-list ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 10px auto; /* Center the list horizontally */
+    display: flex; /* Arrange items in a horizontal line */
+    gap: 20px; /* Add space between items */
+    justify-content: center; /* Center items within the container */
+  }
+  
+.api-data-list ul li {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px; /* Add padding */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Add border */
+    background-color: rgba(255, 255, 255, 0.8); /* Add background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box-shadow */
+}
+  
+.api-data-list ul li span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* Set the space between the icon and text */
+    border-radius: 50%; /* Make the span circular */
+}
+
+.api-data-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* API 데이터 항목 제목 */
+.api-data-item h3 {
+    width: 100%;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: #f0f8ff;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.disease-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 20px 0;
+    width: 45.5%
+  }
+
+.disease-box h3 {
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: #f0f8ff;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.disease-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-height: 200px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.disease-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .disease-highlight {
+    color: #4C50AF;
+    font-weight: bold;
+  }
+  
+  .dust-status {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    color: #4C50AF;
+  }
+  
+  .dust-value {
+    font-size: 1.2rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .dust-level {
+    font-weight: bold;
+  }
+  
+  .disease-warning {
+    background-color: rgba(76, 80, 175, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+  }
+  
+  .disease-type {
+    color: #4C50AF;
+    font-weight: bold;
+  }
+  .advice-box {
+    background-color: #f8f9fa;
+    border-left: 4px solid #4C50AF;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 0 8px 8px 0;
+  }
+
+  
+  .advice-title {
+    color: #4C50AF;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .advice-content {
+    color: #555;
+    line-height: 1.6;
+  }
+.map-header h3 {
+    width: 100%;
+    margin: 0 auto 20px;
+    font-size: 1.2rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    background-color: #f0f8ff;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.measurement-time {
+    text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    color: #333;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.map-container + ul {
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0;
+    margin: 10px auto; /* 수평 중앙 정렬 */
+    display: flex; /* 항목들을 가로로 나열 */
+    justify-content: center; /* 항목들을 가운데 정렬 */
+    gap: 20px; /* 항목 사이에 일정 간격을 둡니다 */
+}
+
+.map-container + ul li {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px; /* 여백 추가 */
+    border-radius: 5px;
+    border: 1px solid #ccc; /* 외곽선 추가 */
+    background-color: rgba(255, 255, 255, 0.8); /* 배경 색상 추가 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 추가 */
+}
+
+.map-container + ul li span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px; /* 아이콘과 텍스트 간의 간격 설정 */
+    border-radius: 50%; /* 원형 모양 */
+}
+/* 네비게이션 바 기본 스타일 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* 네비게이션 바 내부 컨테이너 */
+.navbar-container {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 로고 스타일 */
+.navbar-logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #007bff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.navbar-logo:hover {
+    color: #0056b3;
+}
+
+/* 네비게이션 메뉴 컨테이너 */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+/* 네비게이션 링크 스타일 */
+.navbar-link {
+    font-size: 16px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: color 0.2s ease;
+}
+
+.navbar-link:hover {
+    color: #007bff;
+}
+
+/* 로그인 버튼 스타일 */
+.navbar-login {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.navbar-login:hover {
+    background-color: #0056b3;
+}
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
+  }
+  
+  .footer-container p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .footer-container p a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .footer-container p a:hover {
+    text-decoration: underline;
+  }
+  .region-name {
+    color: #4C50AF;
+    font-weight: bold;
+  }
+  
+  .region-detail {
+    color: #4C50AF;
+    font-weight: bold;
+  }
+  .analyze-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    align-self: flex-start;
+    margin-top: 12%;
+
+  }
+  .analyze-button:hover {
+    background-color: #0056b3;
+  }
